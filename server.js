@@ -20,6 +20,7 @@ app.use(cors({origin: '*'})); //For FCC testing purposes only
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Sometimes this causes issues with the execution of scripts.. Need investigation
 app.use(helmet({
   contentSecurityPolicy:{directives:{
     defaultSrc:["'self'"]
